@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Node Express web application</title>
+    <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|East+Sea+Dokdo|Indie+Flower|Poor+Story" rel="stylesheet">
+    <title>윤승현's Portfolio</title>
     <meta name="description" content="" />
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/gradients.css" rel="stylesheet">
@@ -57,8 +58,8 @@
         <div class="message">
             <a class="twitter-link"><img src="img/check.png" /></a>
             <div class="text">
-                <h2>안녕하세요, 승현</h2>
-                <h3>Keep Moving Productively!</h3>
+                <h1>안녕하세요, 승현</h1>
+                <h2>Keep Moving Productively!</h2>
             </div>
         </div>
         <div class="message">
@@ -130,23 +131,26 @@
             let v25 = obj.data.iaqi.pm25.v;
             document.getElementById("airInfo10").innerHTML = v10 + "   " + airStatus('pm10',v10);
             document.getElementById("airInfo25").innerHTML = v25 + "   " + airStatus('pm25',v25);
+
         }
 
         function airStatus(type, v) {
             const status = ["좋음","보통","한때나쁨","나쁨","매우나쁨"];
+            let pm10 = document.getElementById("airInfo10");
+            let pm25 = document.getElementById("airInfo25");
             switch (type)
             {
                 case "pm25":
-                    if (v <= 15) return status[0];
-                    else if (v <= 50) return status[1];
-                    else if (v <= 75) return status[2];
-                    else if (v <= 100) return status[3];
-                    else return status[4];
+                    if (v <= 15){pm25.style.color="#4e89f6"; return status[0];}
+                    else if (v <= 50){pm25.style.color="#5bd464"; return status[1];}
+                    else if (v <= 75) {pm25.style.color="#ffbc3b"; return status[2];}
+                    else if (v <= 100) {pm25.style.color="#fe7f41"; return status[3];}
+                    else {pm25.style.color="#ff0441"; return status[4];}
                 case "pm10":
-                    if (v <= 30) return status[0];
-                    else if (v <= 80) return status[1];
-                    else if (v <= 150) return status[3];
-                    else return status[4];
+                    if (v <= 30) {pm10.style.color="#4e89f6"; return status[0];}
+                    else if (v <= 80){pm10.style.color="#5bd464"; return status[1];}
+                    else if (v <= 150){pm10.style.color="#fe7f41";return status[3];}
+                    else{pm25.style.color="#ff0441";return status[4];}
                 default:
                     break;
             }
