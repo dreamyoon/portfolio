@@ -146,8 +146,8 @@ footer .footer-contents {
   .message {
     padding: 0;
     width: 50%;
-    left: calc(50vw - 5rem);
-    top: calc(15vh - 5rem);
+    left: 5rem;
+    top: -7rem;
   }
 
   .message .text {
@@ -171,8 +171,8 @@ footer .footer-contents {
 
 @media (min-height: 500px) and (min-width: 1240px) {
   .message {
-    left: calc(50vw - 10rem);
-    top: calc(25vh - 5rem);
+    left: 10rem;
+    top: -5rem;
   }
 
   h1 {
