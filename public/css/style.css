@@ -329,8 +329,7 @@ CONTENT
   position:relative; 
   width:100%; 
   top:0; 
-  height:400px; 
-  background: url('../img/full/full.jpg') center center;
+  height:400px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -403,7 +402,7 @@ CONTENT
             -o-animation: blink 0.7s infinite;
             animation: blink 0.7s infinite;
         }
-        @-keyframes blink{
+        /*@-keyframes blink{
             0% { opacity:1; }
             50% { opacity:0; }
             100% { opacity:1; }
@@ -427,7 +426,7 @@ CONTENT
             0% { opacity:1; }
             50% { opacity:0; }
             100% { opacity:1; }
-        }
+        }*/
 
 /*
 **************************
@@ -700,3 +699,28 @@ textarea{
 }
 
 textarea:focus{background:#f4f4f4; height:250px;}
+
+
+.message {
+  position: relative;
+}
+
+.message .twitter-link {
+  float: left;
+}
+
+.message .twitter-link img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.message .text {
+  float: left;
+}
+
+.message:after, .website-nav:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
